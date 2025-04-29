@@ -33,7 +33,7 @@ class RouletteTask extends Task {
 
         if (strtolower($this->choice) === $this->result) {
             $winAmount = $this->amount * 2;
-            $this->player->sendMessage((string) new Messages($config, "win-message", ["{win_amount}"], [$winAmount]));
+            $this->player->sendMessage((string) new Messages($config, "win-message", ["{win_amount}"], [number_format($winAmount)]));
             WavyEconomyAPI::getInstance()->addMoney($this->player->getName(), $winAmount);
         } else {
             $this->player->sendMessage((string) new Messages($config, "loss-message", ["{loss_amount}"], [$this->amount]));
