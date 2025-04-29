@@ -23,6 +23,7 @@ class RouletteCommand extends BaseCommand {
 
     protected function prepare() : void{
         $this->setPermission("wavycasino.roulette");
+        
         $this->registerArgument(0, new IntegerArgument("amount"));
         $this->registerArgument(1, new RawStringArgument("color"));
     }
