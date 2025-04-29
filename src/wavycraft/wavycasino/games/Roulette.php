@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace wavycraft\wavycasino\manager;
+namespace wavycraft\wavycasino\games;
 
 use pocketmine\player\Player;
 
