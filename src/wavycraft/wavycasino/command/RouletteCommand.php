@@ -58,7 +58,7 @@ class RouletteCommand extends BaseCommand {
             return;
         }
 
-        $sender->sendMessage((string) new Messages($config, "spin-wheel", ["{amount}", "{color}"], [$amount, $color]));
+        $sender->sendMessage((string) new Messages($config, "spin-wheel", ["{amount}", "{color}"], [number_format($amount), $color]));
         WavyEconomyAPI::getInstance()->removeMoney($sender->getName(), $amount);
         Roulette::spin($sender, $amount, $color);
     }
