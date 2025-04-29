@@ -6,7 +6,7 @@ namespace wavycraft\wavycasino;
 
 use pocketmine\plugin\PluginBase;
 
-use terpz710\roulette\command\RouletteCommand;
+use wavycraft\wavycasino\command\RouletteCommand;
 
 use CortexPE\Commando\PacketHooker;
 
