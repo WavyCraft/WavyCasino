@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace wavycraft\wavycasino\command;
 
 use pocketmine\command\CommandSender;
+
 use pocketmine\player\Player;
+
 use pocketmine\utils\Config;
 
 use wavycraft\wavycasino\WavyCasino;
@@ -59,6 +61,5 @@ class RouletteCommand extends BaseCommand {
         $sender->sendMessage((string) new Messages($config, "spin-wheel", ["{amount}", "{color}"], [$amount, $color]));
         WavyEconomyAPI::getInstance()->removeMoney($sender->getName(), $amount);
         Roulette::spin($sender, $amount, $color);
-        }
     }
 }
